@@ -1,0 +1,106 @@
+.box {
+  color: #000;
+}
+.top {
+  width: 100%;
+  line-height: 50px;
+  display: flex;
+}
+.top_line {
+  flex: 1;
+  position: relative;
+}
+.top_line:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  transform: translateY(-50%);
+  }
+  .top_cencer {
+    margin: 0 10px;
+  }
+.top_text {
+  color: #000;
+  padding-left: 10px;
+}
+.form {
+  background-color: #fff;
+  padding: 10px;
+}
+.price {
+  margin-left: 30px;
+}
+.add {
+  padding-bottom: 10px;
+}
+.add_info {
+  background-color: #fff;
+}
+.add_info_top {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #000;
+}
+.add_info_top_item {
+  margin-left: 20px;
+}
+.add_info_buttom {
+  padding: 10px;
+}
+.add_info_buttom_item {
+  display: flex;
+  margin-top: 10px;
+  padding: 10px 20px;
+}
+.add_info_buttom_item div {
+  flex: 1;
+}
+.add_info_buttom_item_title {
+  border: 1px solid #000;
+  background-color: #ccc;
+}
+.add_info_buttom_item_content {
+  border: 1px solid #000;
+  border-top: 0;
+}
+.tab_item {
+  background-color: #fff;
+}
+.card_box_top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.bottom_box {
+  margin-bottom: 50px;
+}
+.sub {
+  padding: 20px 30px;
+  background-color: #fff;
+}
+.logo {
+  width: 200px;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+.index {
+  flex: 1;
+  padding: 0 100px;
+  display: flex;
+  color: #fff;
+}
+.index_img {
+  width: 130px;
+}
+.index img {
+  width: auto;
+  height: 40px;
+  margin-right: 20px;
+}

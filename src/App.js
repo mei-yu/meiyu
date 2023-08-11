@@ -3,30 +3,22 @@ import './App.css';
 import React, { useEffect, useState } from 'react';
 import { Layout, Space, Input, Button } from 'antd';
 import Menus from './menu.js';
+import Top from './top.js';
+import Contents from './content.js';
+import Bottom from './bottom.js';
 
 const { Header, Footer, Sider, Content } = Layout;
-const headerStyle = {
-  color: '#fff',
-  height: 64,
-  paddingInline: 50,
-  display: 'flex',
-  lineHeight: '64px',
-  backgroundColor: '#000'
-};
 const contentStyle = {
-  paddingLeft: '50px',
   textAlign: 'left',
-  minHeight: 120,
-  lineHeight: '120px',
   color: '#fff',
-  backgroundColor: '#fff'
+  backgroundColor: '#ccc'
 };
 const siderStyle = {
   textAlign: 'center',
   lineHeight: '120px',
   color: '#fff',
   backgroundColor: '#000',
-  height: '100%'
+  height: '100vh'
 };
 const list = [
   {
@@ -66,9 +58,6 @@ function App() {
   }
   const [text, setText] = useState('');
 
-  function textChange(input) {
-    setText(input.target.value || '');
-  }
   const [keyList, setKeyList] = useState(['1', 'sub1']);
 
   function select(list) {
@@ -87,21 +76,62 @@ function App() {
   return (
     <Space direction="vertical" style={{ width: '100%', height: '100%' }}>
       <Layout>
-        <Header style={headerStyle}>
-          <div style={{ flex: 1, textAlign: 'left' }}>react</div>
-          <div style={{ flex: 1, textAlign: 'right' }}>admin</div>
+        <Header style={{ padding: '0', display: 'flex' }}>
+          <div className="logo">
+            <img
+              src="https://img2.baidu.com/it/u=2613289509,3052102499&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500"
+              alt=""
+            />
+          </div>
+          <div className="index">
+            <div className="index_img">
+              <img
+                src="https://img2.baidu.com/it/u=2613289509,3052102499&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500"
+                alt=""
+              />
+              首页
+            </div>
+            <div className="index_img">
+              <img
+                src="https://img2.baidu.com/it/u=2613289509,3052102499&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500"
+                alt=""
+              />
+              首页
+            </div>
+            <div className="index_img">
+              <img
+                src="https://img2.baidu.com/it/u=2613289509,3052102499&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500"
+                alt=""
+              />
+              首页
+            </div>
+          </div>
         </Header>
         <Layout style={{ height: '100%', backgroundColor: '#000' }}>
           <Sider style={siderStyle}>
             <Menus isprops={isList} select={select}></Menus>
           </Sider>
           <Content style={contentStyle}>
-            <Space.Compact style={{ width: '30%' }}>
-              <Input defaultValue="" value={text} onChange={textChange} />
-              <Button type="primary" onClick={listOut}>
-                保存
-              </Button>
-            </Space.Compact>
+            <div
+              style={{
+                padding: '10px 20px',
+                lineHeight: '20px',
+                backgroundColor: '#fff'
+              }}
+            >
+              <div style={{ fontSize: '12px', color: '#c1c1c1' }}>
+                的经费卡号的咖啡机哈利肯定就恢复了卡号
+              </div>
+              <div style={{ fontSize: '16px', color: '#000' }}>对方哈迪斯</div>
+            </div>
+            <div style={{ padding: '0 20px' }}>
+              <Top></Top>
+              <Contents></Contents>
+              <Bottom></Bottom>
+            </div>
+            <div className="sub">
+              <Button type="primary">保存</Button>
+            </div>
           </Content>
         </Layout>
       </Layout>
